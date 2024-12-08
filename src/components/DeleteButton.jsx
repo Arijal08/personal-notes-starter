@@ -9,3 +9,5 @@ function DeleteButton({ id, onDelete }) {
     </div>
   );
 }
+
+export default DeleteButton;
