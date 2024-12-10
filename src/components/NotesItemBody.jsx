@@ -1,12 +1,13 @@
 import React from "react";
+import { showFormattedDate } from "../utils";
 
-function NotesItemBody({ title, body, createAt }) {
+function NotesItemBody({ note }) {
   return (
-    <div className="notes-item-body">
-      <h3 className="notes-title">{title}</h3>
-      <p className="notes-body">{body}</p>
-      <span>{createAt}</span>
-    </div>
+    <>
+      <h3 className="note-item__title ">{note.title}</h3>
+      <p className="note-item__date">{showFormattedDate(note.createdAt)}</p>
+      <p className="note-item__body">{note.body}</p>
+    </>
   );
 }
 

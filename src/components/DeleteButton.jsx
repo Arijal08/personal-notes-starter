@@ -1,10 +1,13 @@
 import React from "react";
 
-function DeleteButton({ id, onDelete }) {
+function DeleteButton({ note, onDelete }) {
   return (
     <div>
-      <button className="button-delete" onClick={() => onDelete(id)}>
-        X
+      <button
+        className="note-item__delete-button"
+        onClick={() => onDelete(note.id)}
+      >
+        Hapus
       </button>
     </div>
   );
